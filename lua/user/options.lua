@@ -43,7 +43,7 @@ local options = {
     mouse = "a",                             -- modes that the mouse is allowed to be used in
 
     -- updating / timeouts
-    timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+    timeoutlen = 500,                        -- time to wait for a mapped sequence to complete (in milliseconds)
     updatetime = 300,                        -- length of time from stopping typing to triggering plugins (4000ms default)
 
     -- colours / fonts

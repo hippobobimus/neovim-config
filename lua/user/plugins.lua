@@ -45,9 +45,16 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- useful lua functions used by lots of plugins
 
 	-- My plugins here
+	use("numToStr/Comment.nvim") -- commenting support
 
 	-- Colour schemes
 	use("ellisonleao/gruvbox.nvim")
+
+	-- Lualine
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 
 	-- Completion plugins
 	use("hrsh7th/nvim-cmp") -- the completion plugin
@@ -57,6 +64,11 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- lsp
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
+
+	-- Debugger
+	use("mfussenegger/nvim-dap") -- the debugger plugin
+	use({ "Pocco81/DAPInstall.nvim", branch = "dev", commit = "24923c3" }) -- debugger installer
+	use("nvim-telescope/telescope-dap.nvim") -- telescope integration
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -77,6 +89,10 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("JoosepAlviste/nvim-ts-context-commentstring") -- context based commenting
+
+	-- Git
+	use("lewis6991/gitsigns.nvim")
 
 	-- Markdown
 	use("ellisonleao/glow.nvim") -- previewing
