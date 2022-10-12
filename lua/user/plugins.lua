@@ -46,6 +46,12 @@ return packer.startup(function(use)
 
 	-- My plugins here
 	use("numToStr/Comment.nvim") -- commenting support
+	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons", -- optional, for file icons
+		},
+	})
 
 	-- Colour schemes
 	use("ellisonleao/gruvbox.nvim")
